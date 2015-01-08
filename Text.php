@@ -10,6 +10,7 @@ class Text
 	 */
 	public static function correctLinks($text)
 	{
+		$a = 1;
 		// Looking for links
 		$text = preg_replace("/<a.*?(href=\".*?\").*?>/i", '<a $1 rel="nofollow" target="_blank">', $text);
 
